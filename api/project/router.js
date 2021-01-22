@@ -9,7 +9,7 @@ const Projects = require("./model");
 router.post("/", (req, res) => {
   const body = req.body;
   if (!body.project_name) {
-    res.status(400).json({ message: "missing required fields" });
+    res.status(400);
   }
   Projects.postProject(body)
     .then((project) => {

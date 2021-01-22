@@ -12,7 +12,7 @@ router.post("/", (req, res) => {
   }
   Resources.postResource(body)
     .then((resource) => {
-      res.status(200).json(resource);
+      res.status(201).json(resource);
     })
     .catch((err) => {
       res.status(500).json({ error: err.message });

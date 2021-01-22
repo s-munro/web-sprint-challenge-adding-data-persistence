@@ -9,7 +9,7 @@ const Tasks = require("./model");
 router.post("/", (req, res) => {
   const body = req.body;
   if (!body.task_description) {
-    res.status(400).json({ message: "missing required fields" });
+    res.status(400);
   }
   Tasks.postTask(body)
     .then((task) => {
